@@ -1,1 +1,18 @@
-learn GIT
+buổi 2: 11/03
+Nội dung cần nắm được:
+Có 2 cách để build một chương trình C/C++
+	Cách 1: sử dụng IDE (visul studio 2019)
+	Cách 2: sử dụng GCC
+*************************************************
+Sử dụng IDE (visual studio 2019)
+ bước 1: mở visual studio 2019
+ bước 2: tạo project C++ ( tạo project trống)
+ bước 3: tạo file "main.c" và viết chương trình HelloWorld đầu tiên. ( chương trình HelloWorld được lưu trong "project c" folder
+ bước 4: nhấn F5 để build chương trình và chạy chương trình.
+*************************************************
+Sử dụng GCC để build chương trình.
+ Bước 1: tạo file main.c bằng bất kỳ editor mà máy tính đang có ( notepad, notepad++,....)
+ bước 2: viết chương trình HelloWorld đầu tiên.
+ bước 3: mở "cmd" và đi đến thư mục chứa file "main.c"
+ bước 4: sử dụng lệnh "gcc main.c" để build chương trình.
+ bước 5: chạy lệnh <tên chương trình>.exe để chạy chương trình vừa tạo ra.
