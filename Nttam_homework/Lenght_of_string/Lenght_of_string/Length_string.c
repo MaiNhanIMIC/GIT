@@ -10,7 +10,7 @@ void main()
 	char *msg = "Hello C progrmaming language"; // return the memory address of first char in string
 	printf("the length of string%d\r\n", count_str(msg));
 
-	/*Version 2*/
+	/*Version 2-error*/
 	/*char* str[123];
 	printf("Please in a string :\r\n");
 	scanf_s("%s", *str);
