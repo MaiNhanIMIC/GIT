@@ -1,0 +1,8 @@
+﻿  Length_string.c
+D:\AUTOMOTIVE EMBEDDED SYSTEMS\Embedded on Class\GIT\Nttam_homework\Lenght_of_string\Lenght_of_string\Length_string.c(16,10): warning C4473: 'scanf_s' : not enough arguments passed for format string
+D:\AUTOMOTIVE EMBEDDED SYSTEMS\Embedded on Class\GIT\Nttam_homework\Lenght_of_string\Lenght_of_string\Length_string.c(16,10): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+D:\AUTOMOTIVE EMBEDDED SYSTEMS\Embedded on Class\GIT\Nttam_homework\Lenght_of_string\Lenght_of_string\Length_string.c(16,10): message : the missing variadic argument 2 is required by format string '%s'
+D:\AUTOMOTIVE EMBEDDED SYSTEMS\Embedded on Class\GIT\Nttam_homework\Lenght_of_string\Lenght_of_string\Length_string.c(16,10): message : this argument is used as a buffer size
+D:\AUTOMOTIVE EMBEDDED SYSTEMS\Embedded on Class\GIT\Nttam_homework\Lenght_of_string\Lenght_of_string\Length_string.c(17,53): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[123]'
+D:\AUTOMOTIVE EMBEDDED SYSTEMS\Embedded on Class\GIT\Nttam_homework\Lenght_of_string\Lenght_of_string\Length_string.c(17,53): warning C4024: 'count_str': different types for formal and actual parameter 1
+  Lenght_of_string.vcxproj -> D:\AUTOMOTIVE EMBEDDED SYSTEMS\Embedded on Class\GIT\Nttam_homework\Lenght_of_string\Debug\Lenght_of_string.exe
