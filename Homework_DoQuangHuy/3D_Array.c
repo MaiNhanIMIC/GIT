@@ -11,6 +11,8 @@ int main()
 			for (int k = 0; k < 5; k++)
 			{
 				a[i][j][k] = 100 * (i + 1) + 10 * j + k + 1;
+				// printf("nhap phan tu a[%d][%d][%d]: \r\n", i, j, k);
+				// scanf("%d", (int*)a + i*12 + j*4 + k);
 			}
 		}
 	}
@@ -22,6 +24,7 @@ int main()
 			for (int k = 0; k < 5; k++)
 			{
 				printf("%d%c", a[i][j][k], k == 4 ? '\n' : ' ');
+				// printf("%d ", *(*(*(a + i) + j) + k));
 			}
 			printf("%c", j == 2 ? '\n' : '\b');
 		}
