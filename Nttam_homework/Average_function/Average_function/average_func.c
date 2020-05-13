@@ -8,7 +8,7 @@ void main()
 {
 	// define a array
 	int mang[10] = { 1,2,3,4,5,1000,2000,30000,100000,150 };
-		printf("Average of array is %.2f\r\n", mean_array(mang, 10));
+	printf("Average of array is %.2f\r\n", mean_array(mang, 10));
 }
 
 float mean_array(int array[],int number)
