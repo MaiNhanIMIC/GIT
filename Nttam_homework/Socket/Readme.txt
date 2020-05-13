@@ -1,0 +1,2 @@
+- Tham khảo project. Sử dụng thư viện Socket.
+- Xử lý chũi để tách lấy, ngày/tháng/năm, Giờ/Phút/Giây
