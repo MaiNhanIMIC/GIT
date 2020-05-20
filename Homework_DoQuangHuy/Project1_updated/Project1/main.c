@@ -3,22 +3,16 @@
 #include "stdint.h"
 #include "Socket.h"
 
-typedef char* string;
+//typedef char* string;
 
 int main()
 {
 	char buff[1024];
-	Get_Data_AWS(buff, sizeof(buff));
-	string strFind = "Date";
-	int length = stringLen(strFind);
-	int result = strngFind(buff, strFind);
-	if (result == -1) {
-		printf("\nNot found string\r\n");
-	}
-	else {
-		printf("\nString %s at index %d\r\n",strFind, result);
-	}
-	printf("=== noi dung chuoi string ===\r\n");
-	status(result, buff, length);
+	memset(buff, 0, sizeof(buff));
+	Get_Img_AWS(buff);
+	//sprintf("LED_ON");
+	/*char* data = "LED_ON";*/
+	//Put_Data_AWS(data);
+	/*Get_Data_AWS(buff, sizeof(buff));*/
 	return 0;
 }

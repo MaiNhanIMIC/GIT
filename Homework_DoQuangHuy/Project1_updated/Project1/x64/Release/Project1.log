@@ -1,0 +1,19 @@
+﻿  Socket.c
+D:\Developer\IMIC Course\C,C++\MaiNhan\GIT\Homework_DoQuangHuy\Project1_updated\Project1\Socket.h(3,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\Developer\IMIC Course\C,C++\MaiNhan\GIT\Homework_DoQuangHuy\Project1_updated\Project1\Socket.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\Developer\IMIC Course\C,C++\MaiNhan\GIT\Homework_DoQuangHuy\Project1_updated\Project1\Socket.c(11,11): warning C4098: 'Socket_Init': 'void' function returning a value
+D:\Developer\IMIC Course\C,C++\MaiNhan\GIT\Homework_DoQuangHuy\Project1_updated\Project1\Socket.c(33,11): warning C4098: 'Socket_Init': 'void' function returning a value
+D:\Developer\IMIC Course\C,C++\MaiNhan\GIT\Homework_DoQuangHuy\Project1_updated\Project1\Socket.c(45,11): warning C4098: 'Socket_Server_Init': 'void' function returning a value
+D:\Developer\IMIC Course\C,C++\MaiNhan\GIT\Homework_DoQuangHuy\Project1_updated\Project1\Socket.c(73,35): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+D:\Developer\IMIC Course\C,C++\MaiNhan\GIT\Homework_DoQuangHuy\Project1_updated\Project1\Socket.c(74,8): warning C4013: 'close' undefined; assuming extern returning int
+D:\Developer\IMIC Course\C,C++\MaiNhan\GIT\Homework_DoQuangHuy\Project1_updated\Project1\Socket.c(75,62): warning C4244: '=': conversion from 'SOCKET' to 'int', possible loss of data
+D:\Developer\IMIC Course\C,C++\MaiNhan\GIT\Homework_DoQuangHuy\Project1_updated\Project1\Socket.c(68,1): warning C4244: 'initializing': conversion from 'SOCKET' to 'int', possible loss of data
+  main.c
+D:\Developer\IMIC Course\C,C++\MaiNhan\GIT\Homework_DoQuangHuy\Project1_updated\Project1\Socket.h(3,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\Developer\IMIC Course\C,C++\MaiNhan\GIT\Homework_DoQuangHuy\Project1_updated\Project1\Socket.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating code
+  2 of 12 functions (16.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Project1.vcxproj -> D:\Developer\IMIC Course\C,C++\MaiNhan\GIT\Homework_DoQuangHuy\Project1_updated\x64\Release\Project1.exe

@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "Socket.h"
 #include "stdio.h"
 
@@ -85,16 +86,6 @@ int Socket_Recv(char* src, uint16_t size)
 	return recv(s, src, size, 0);
 }
 
-void Get_Data_AWS(char* data, int size)
-{
-	char* data_send = "GET /helloWorld.txt HTTP/1.1\r\nHost: imic-backet-s3.s3-ap-southeast-1.amazonaws.com\r\n\r\n";
-	memset(data, 0, size);
-	Socket_Init("52.219.128.223", 80);
-	Socket_Send(data_send, stringLen(data_send));
-	Socket_Recv(data, size);
-	printf("%s", data);
-}
-
 int stringLen(char* string)
 {
 	int len = 0;
@@ -120,14 +111,80 @@ int strngFind(string stringSrc, string stringFind)
 	return i;
 }
 
-char status(int index, char* buff, int strlen)
+int status(int index, char* buff, int strlen, char* arr)
 {
 	int i = index + strlen;
-	/*printf("%c", buff[i]);*/
-	while (buff[i] != '\n')
+	int res = 0;
+	int j;
+	printf("Content-Length: ");
+	while (buff[i] != '\r')
 	{
 		printf("%c", buff[i]);
+		for (j = 0; j <= strlen; j++)
+		{
+			arr[j] = buff[i];
+		}
+		res = res * 10 + (buff[i] - '0');
 		i++;
 	}
-	return 0;
+	printf("\n");
+	printf("Length: %d", res);
+	return res;
 }
+
+int Get_Content_Length(char* data)
+{
+	char arr[100];
+	string strFind = "Content-Length: ";
+	int length = stringLen(strFind);
+	int result = strngFind(data, strFind);
+	int intLen = status(result, data, length, arr);
+	return intLen;
+}
+
+//void Get_Data_AWS(char* data, int size)
+//{
+//	char temp[1024];
+//	char* data_send = "GET /helloWorld.txt HTTP/1.1\r\nHost: imic-backet-s3.s3-ap-southeast-1.amazonaws.com\r\n\r\n";
+//	memset(data, 0, size);
+//	//sprintf(temp, "PUT /helloWorld.txt HTTP/1.1\r\nHost: imic-backet-s3.s3-ap-southeast-1.amazonaws.com\r\nContent-Length:%d\r\n\r\n%s", stringLen(data), data);
+//	Socket_Init("52.219.128.223", 80);
+//	Socket_Send(data_send, stringLen(data_send));
+//	Socket_Recv(data, size);
+//	printf("%s\r\n", data);
+//}
+
+void Get_Img_AWS(char* imgName)
+{
+	char* data_send = "GET /C-programming.png HTTP/1.1\r\nHost: imic-backet-s3.s3-ap-southeast-1.amazonaws.com\r\n\r\n";
+	char temp[1024];
+	memset(temp, 0, 1024);
+	Socket_Init("52.219.128.223", 80);
+	Socket_Send(data_send, stringLen(data_send));
+	Socket_Recv(temp, 1024);
+	printf("%s", temp);
+	int contenLen = Get_Content_Length(temp);
+	FILE* imgFile = fopen(imgName, "w+b");
+	char data_img_char = 0;
+	for (int i = 0; i < contenLen; i++)
+	{
+		Socket_Recv(&data_img_char, sizeof(data_img_char));
+		fputc(data_img_char, imgFile);
+	}
+	fclose(imgFile);
+}
+
+
+
+//void Put_Data_AWS(char* data)
+//{
+//	char temp[1024];
+//	//char* data_send = "PUT /helloWorld.txt HTTP/1.1\r\nHost: imic-backet-s3.s3-ap-southeast-1.amazonaws.com\r\nContent-Length:8\r\n\r\nXin chao";
+//	//memset(data, 0, size);
+//	sprintf(temp, "PUT /helloWorld.txt HTTP/1.1\r\nHost: imic-backet-s3.s3-ap-southeast-1.amazonaws.com\r\nContent-Length:%d\r\n\r\n%s", stringLen(data), data);
+//	Socket_Init("52.219.128.223", 80);
+//	Socket_Send(temp, stringLen(temp));
+//	//Socket_Recv(data, size);
+//	printf("%s\r\n", data);
+//}
+
